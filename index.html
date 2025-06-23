@@ -3,18 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image Host</title>
+  <title>PixNest – Free Image Hosting</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Upload Your Image</h1>
 
-    <input type="file" id="fileInput" />
+    <!-- Header with logo -->
+    <div class="header">
+      <img src="logo.png" alt="PixNest Logo" class="logo">
+      <h1>PixNest – Free Image Hosting</h1>
+    </div>
+
+    <!-- Dark mode button -->
+    <button onclick="toggleDarkMode()" id="darkModeBtn">Toggle Dark Mode</button>
+
+    <!-- Upload input -->
+    <input type="file" id="fileInput" onchange="showPreview(event)" />
     <button onclick="uploadImage()">Upload</button>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
+    <!-- Preview section -->
+    <div id="previewContainer">
+      <img id="preview" style="max-width: 100%; margin-top: 10px; display: none;" />
+    </div>
+
+    <p id="output"></p>
+
+    <!-- Ad section -->
+    <div class="ad-space">
+      <p>Ad goes here</p>
+    </div>
+
+    <!-- Gallery -->
     <div id="gallery"></div>
+
   </div>
 
   <script src="script.js"></script>
