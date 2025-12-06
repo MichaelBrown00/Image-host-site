@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixNest – Free Image Hosting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header with logo -->
+    <div class="header">
+      <img src="logo.png" alt="PixNest Logo" class="logo">
+      <h1>PixNest – Free Image Hosting</h1>
+    </div>
+
+    <!-- Dark mode button -->
+    <button id="darkModeBtn">Toggle Dark Mode</button>
+
+    <!-- Upload Section -->
+    <input type="file" id="imageInput" />
+    <button id="uploadBtn">Upload Image</button>
+
+    <!-- Preview section -->
+    <div id="previewContainer">
+      <img id="previewImg" style="max-width: 100%; margin-top: 10px; display: none;" />
+    </div>
+
+    <!-- Status / Output -->
+    <p id="uploadStatus"></p>
+
+    <!-- Gallery -->
+    <div id="gallery"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
